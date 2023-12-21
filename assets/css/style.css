@@ -5,33 +5,52 @@ h1 {
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 14px;
+    white-space: pre-line;
+    word-wrap: break-word;
 }
 
 h3 {
     font-size: 12px;
     font-weight: normal;
+    white-space: pre-line;
 }
 
 p {
     font-size: 14px;
+    white-space: pre-line;
 }
 
+#subscribe-button button {
+    background-color: #CC0000;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    border: currentColor;
+    border-radius: 2px;
+    width: 160px;
+    height: 40px;
+}
+
+#channel-infos img {
+    border-radius: 50%;
+}
+
+/******** header **********/
 header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     flex: initial;
-    flex: 1 1;
-    gap: 50px;
+    gap: 20px;
     height: 56px;
     padding: 0 16px;
 }
 
 #menu {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -44,7 +63,7 @@ header {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    flex: 3 3 auto;
+    flex: 3 5 auto;
 }
 
 #search form input {
@@ -53,48 +72,70 @@ header {
 
 #personal {
     display: flex;
+    gap: 15px;
 }
 
+/********** content **********/
 #content {
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
     justify-content: center;
+    padding: 24px;
+    background-color: #F9F9F9;
 }
 
 #content main #watching-video {
-    max-width: 700px;
+    max-width: 800px;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
+    gap: 15px;
 }
 
 iframe {
-    align-self: center;
+    align-self: flex-start;
     width: 100%;
-    height: 100%;
-    max-width: 640px;
-    max-height: 360px;
-}
-
-nav {
-    width: 388px;
-    min-width: 388px;
-}
-
-.other-video {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-}
-
-.infos {
-    width: 100%;
-    flex: 1;
+    max-width: 1280px;
+    border-radius: 12px;
 }
 
 #video-actions {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    align-items: center;
+    gap: 15px;
+}
+
+#channel-infos {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.action {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+    align-items: center;
+    height: 48px;
+}
+
+/********* nav *********/
+nav {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+.infos {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 187px;
+    flex: 1;
+    gap: 7px;
 }
 
 #channel-infos h2 {
@@ -103,4 +144,14 @@ nav {
 
 #channel-infos h2 span {
     font-weight: bold;
+}
+
+.other-video {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
+
+.thumbnails {
+    border-radius: 7px;
 }
